@@ -1,2 +1,3 @@
-# uthmap
-Examples using the Google Map API
+# staticassets
+Staticassets contents for httpd container in OSCP
+Added images.
