@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Red Hat Monument Google Maps Test2</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height:80%;
+        width:80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 20;
+        padding: 20;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var marker;
+
+      var redhatmonument = {lat: 51.509943, lng: -0.085263};
+
+      function initMap() 
+      {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 51.510142, lng: -0.086307},
+          zoom: 18
+        });
+
+        marker = new google.maps.Marker({redhatmonument, map:map});
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRVwHJ1g-pnZnpDPKvr8V10nO_2OV8DZ4&callback=initMap"
+    async defer></script>
+  </body>
+</html>
